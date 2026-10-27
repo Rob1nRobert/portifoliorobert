@@ -1,0 +1,99 @@
+* { box-sizing: border-box; }
+
+body.contact-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 clamp(20px, 6vw, 88px);
+    background: #1C1C1C;
+    color: #F4F4F4;
+    font-family: "Boldonse", system-ui, sans-serif;
+    transition: background-color 180ms ease, color 180ms ease;
+}
+
+.contact-topbar {
+    width: min(100%, 1280px);
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.back-link { color: #FACC15; text-decoration: none; font-size: 13px; }
+.back-link:hover { color: #ff341e; }
+
+.language-switch { display: flex; align-items: center; gap: 6px; color: #FACC15; white-space: nowrap; }
+.language-switch button { all: unset; cursor: pointer; padding: 8px 4px; color: #F4F4F4; font: 12px "Boldonse", system-ui, sans-serif; }
+.language-switch button[aria-pressed="true"] { color: #FACC15; }
+.language-switch .theme-toggle { margin-left: 8px; padding: 6px 9px; border: 1px solid #FACC15; border-radius: 50%; color: #FACC15; font: 18px/1 Arial, sans-serif; }
+
+.contact-main { width: min(100%, 1040px); margin: 0 auto; padding: clamp(54px, 10vh, 112px) 0 36px; }
+.contact-intro { max-width: 760px; }
+.contact-eyebrow { margin: 0 0 18px; color: #FACC15; font-size: 11px; letter-spacing: .12em; }
+.contact-intro h1 { margin: 0; color: #ff341e; font-size: clamp(38px, 7vw, 76px); line-height: 1.15; }
+.contact-question { color: #FACC15; }
+.contact-description { max-width: 640px; margin: 22px 0 42px; color: #D3D3D3; font-size: clamp(14px, 1.6vw, 17px); line-height: 1.8; }
+
+.contact-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.contact-card {
+    min-height: 190px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 22px 18px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background: #242424;
+    color: #F4F4F4;
+    text-decoration: none;
+    transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+.contact-card:hover { transform: translateY(-4px); border-color: #FACC15; }
+.discord-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 7px; }
+.discord-action { all: unset; cursor: pointer; padding: 7px 9px; border: 1px solid #FACC15; border-radius: 6px; color: #FACC15; font: 11px system-ui, sans-serif; text-decoration: none; transition: color 160ms ease, background-color 160ms ease, transform 160ms ease; }
+.discord-action:hover { transform: translateY(-1px); background: #FACC15; color: #1C1C1C; }
+.discord-copy-status { min-height: 14px; color: #FACC15; font: 10px system-ui, sans-serif; }
+.contact-card-icon { width: 38px; height: 38px; flex: 0 0 38px; display: grid; place-items: center; border: 1px solid #FACC15; border-radius: 50%; color: #FACC15; font: 20px/1 Arial, sans-serif; }
+.contact-card-icon-text { font-weight: 700; font-size: 15px; }
+.contact-card-copy { min-width: 0; display: flex; flex: 1; flex-direction: column; gap: 8px; }
+.contact-card-label { color: #FACC15; font-size: 12px; }
+.contact-card-value { overflow-wrap: anywhere; color: #F4F4F4; font-size: 13px; line-height: 1.55; }
+.contact-card-action { margin-top: 5px; color: #D3D3D3; font: 12px system-ui, sans-serif; }
+.contact-card-arrow { margin-left: auto; color: #FACC15; font: 18px Arial, sans-serif; }
+.contact-footer { margin-top: 48px; color: #888; font: 12px system-ui, sans-serif; }
+
+body.contact-page[data-theme="light"] { background: #F4F4F0; color: #1C1C1C; }
+body.contact-page[data-theme="light"] .contact-description,
+body.contact-page[data-theme="light"] .contact-card-action,
+body.contact-page[data-theme="light"] .contact-footer { color: #555; }
+body.contact-page[data-theme="light"] .contact-card { background: #FFFFFF; border-color: #DDDDD6; box-shadow: 0 8px 24px rgba(28, 28, 28, .06); }
+body.contact-page[data-theme="light"] .contact-card:hover { border-color: #FACC15; box-shadow: 0 12px 28px rgba(28, 28, 28, .1); }
+body.contact-page[data-theme="light"] .contact-card-value,
+body.contact-page[data-theme="light"] .language-switch button { color: #1C1C1C; }
+body.contact-page[data-theme="light"] .language-switch button[aria-pressed="true"] { color: #1C1C1C; }
+body.contact-page[data-theme="light"] .language-switch .theme-toggle { color: #1C1C1C; }
+body.contact-page[data-theme="light"] .discord-action { color: #1C1C1C; }
+body.contact-page[data-theme="light"] .discord-action:hover { background: #FACC15; color: #1C1C1C; }
+body.contact-page[data-theme="light"] .discord-copy-status { color: #1C1C1C; }
+
+@media (max-width: 760px) {
+    body.contact-page { padding: 0 20px; }
+    .contact-topbar { min-height: 68px; }
+    .contact-main { padding-top: 50px; }
+    .contact-description { margin-bottom: 30px; }
+    .contact-options { grid-template-columns: 1fr; gap: 12px; }
+    .contact-card { min-height: 128px; align-items: center; padding: 18px; }
+    .contact-footer { margin-top: 30px; }
+}
+
+.contact-intro { animation: contact-enter 480ms cubic-bezier(.2,.75,.25,1) both; }
+.contact-eyebrow { animation: contact-enter 520ms 70ms both; }
+.contact-options .contact-card { animation: contact-enter 500ms both; }
+.contact-options .contact-card:nth-child(2) { animation-delay: 100ms; }
+.contact-options .contact-card:nth-child(3) { animation-delay: 180ms; }
+.contact-options .contact-card:nth-child(4) { animation-delay: 260ms; }
+@keyframes contact-enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

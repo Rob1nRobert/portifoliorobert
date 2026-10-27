@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="IconR.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pageTitle">Portfólio de Robert</title>
+</head>
+<body>
+<main class="mainbox">
+    <header id="navbar">
+        <div class="language-switch" data-i18n-aria="languagePicker" aria-label="Idioma">
+            <button type="button" data-lang-choice="pt" aria-label="Português">PT</button>
+            <span>|</span>
+            <button type="button" data-lang-choice="en" aria-label="English">EN</button>
+            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Ativar modo claro" title="Ativar modo claro">☼</button>
+        </div>
+       
+        <div id="buttons">
+            <button type="button" data-nav-page="homebox" aria-current="page">
+                <p class="buttons" data-i18n="home"><strong>INÍCIO</strong></p>
+            </button>
+            <button type="button" data-nav-page="aboutbox">
+                <p class="buttons" data-i18n="about"><b>SOBRE</b></p>
+            </button>
+            <button type="button" data-nav-page="workbox">
+    <p class="buttons" data-i18n="works"><strong>TRABALHOS</strong></p>
+</button>
+
+        </div>
+        <div id="gitbutton">
+             <a href="https://github.com/Rob1nRobert">
+                <button>
+                    <img class="gitimg" src="icons8-github.gif" alt="GitHub" data-i18n-alt="githubAlt">
+                </button>
+            </a>
+        </div>
+    </header>
+    <section id="homebox" class="page active">
+    
+        <div id="contactbox">
+            <div class="textbox1">
+            <p style="color:#FACC15 ;font-size: 10px;" data-i18n="greeting">Olá, eu sou Robert</p>
+            <h1 class="fullstacktitle" data-i18n="profession">Editor de Vídeos</h1>
+            <a id="contact-link" data-contact-link href="contact.html"><p class="contactp" data-i18n="contactMe"><strong>Entre em contato</strong></p></a>
+            </div>
+        </div>
+        <div id="photobox" aria-hidden="true">
+            <div class="hero-editor-card">
+                <div class="hero-editor-top"><span></span><span></span><span></span><b>EDIT / 01</b></div>
+                <div class="hero-preview"><span class="hero-preview-play">▶</span><span class="hero-preview-line"></span></div>
+                <div class="hero-mini-timeline">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <p class="hero-editor-caption">CORTE · RITMO · HISTÓRIA</p>
+            </div>
+        </div>
+        </section>
+    <section id="workbox" class="page">
+        <div class="works-heading">
+            <h1 class="tittlework" data-i18n="videoTitle">Meus vídeos</h1>
+            <div class="carousel-controls" aria-label="Controles do carrossel">
+                <button class="carousel-button" type="button" data-direction="-1" data-i18n-aria="previousVideo" aria-label="Vídeo anterior">‹</button>
+                <button class="carousel-button" type="button" data-direction="1" data-i18n-aria="nextVideo" aria-label="Próximo vídeo">›</button>
+            </div>
+        </div>
+        <div class="niche-filter-area">
+            <h2 data-i18n="nichesTitle">Filtrar por nicho</h2>
+            <div class="niche-filters" role="group" data-i18n-aria="nicheFiltersLabel" aria-label="Filtrar vídeos por nicho">
+                <button type="button" class="niche-filter active" data-niche-filter="all" data-i18n="allNiches" aria-pressed="true">Todos</button>
+                <button type="button" class="niche-filter" data-niche-filter="games" data-i18n="nicheGames" aria-pressed="false">Jogos</button>
+                <button type="button" class="niche-filter" data-niche-filter="other" data-i18n="nicheOther" aria-pressed="false">Outros</button>
+            </div>
+        </div>
+        <div class="workbox2" data-i18n-aria="videoCarousel" aria-label="Carrossel de vídeos">
+            <article class="Works" data-niche="games">
+                <div class="video-frame vertical-video"><iframe src="https://www.youtube.com/embed/EexkABynGdo?enablejsapi=1" title="Jogo 01 — YouTube Shorts" data-i18n-title="gameVideo1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <h2 data-i18n="gameVideo1">Jogo 01</h2>
+                <p data-i18n="youtubeShortDescription">Edição para YouTube Shorts.</p>
+            </article>
+            <article class="Works" data-niche="games">
+                <div class="video-frame vertical-video"><iframe src="https://www.youtube.com/embed/wYV0LbGsFuY?enablejsapi=1" title="Jogo 02 — YouTube Shorts" data-i18n-title="gameVideo2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <h2 data-i18n="gameVideo2">Jogo 02</h2>
+                <p data-i18n="youtubeShortDescription">Edição para YouTube Shorts.</p>
+            </article>
+            <article class="Works" data-niche="other">
+                <div class="video-frame vertical-video"><iframe src="https://www.youtube.com/embed/GSeT4iWmxms?enablejsapi=1" title="Outro vídeo 01 — YouTube Shorts" data-i18n-title="otherVideo1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <h2 data-i18n="otherVideo1">Outro vídeo 01</h2>
+                <p data-i18n="youtubeShortDescription">Edição para YouTube Shorts.</p>
+            </article>
+            <article class="Works" data-niche="other">
+                <div class="video-frame vertical-video"><iframe src="https://www.youtube.com/embed/uJylXmaSxjw?enablejsapi=1" title="Outro vídeo 02 — YouTube Shorts" data-i18n-title="otherVideo2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <h2 data-i18n="otherVideo2">Outro vídeo 02</h2>
+                <p data-i18n="youtubeShortDescription">Edição para YouTube Shorts.</p>
+            </article>
+            <article class="Works" data-niche="other">
+                <div class="video-frame vertical-video"><iframe src="https://www.youtube.com/embed/2LqrnS8fJaQ?enablejsapi=1" title="Outro vídeo 03 — YouTube Shorts" data-i18n-title="otherVideo3" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <h2 data-i18n="otherVideo3">Outro vídeo 03</h2>
+                <p data-i18n="youtubeShortDescription">Edição para YouTube Shorts.</p>
+            </article>
+        </div>
+    </section>
+    <section id="aboutbox" class="page">
+      <div class="about-layout">
+        <div class="about-copy">
+          <p class="about-kicker" data-i18n="aboutKicker">SOBRE MIM</p>
+          <h1 class="about-heading"><span data-i18n="aboutTitle">Conheça meu trabalho</span><span class="about-heading-mark">.</span></h1>
+          <p class="about-description" data-i18n="aboutText">Sou Robert, editor de vídeos. Este espaço apresenta meus trabalhos e meu estilo de edição.</p>
+          <a class="about-contact-link" data-contact-link href="contact.html"><span data-i18n="aboutContact">Vamos conversar</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <aside class="about-visual" data-i18n-aria="editingTimelineLabel" aria-label="Ilustração de uma linha do tempo de edição">
+          <div class="timeline-topline"><span></span><span></span><span></span></div>
+          <div class="timeline-preview" aria-hidden="true">
+            <div class="timeline-track"><i></i><i></i><i></i></div>
+            <div class="timeline-track"><i></i><i></i></div>
+            <div class="timeline-track"><i></i><i></i><i></i><i></i></div>
+            <div class="timeline-playhead"></div>
+          </div>
+          <p class="timeline-caption" data-i18n="timelineCaption">Imagem · áudio · montagem</p>
+        </aside>
+      </div>
+    </section>
+
+</main>
+<script src="main.js"></script>
+</body>
+</html> 

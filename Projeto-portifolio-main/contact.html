@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1C1C1C">
+    <link rel="icon" href="IconR.png">
+    <title data-i18n="contactPageTitle">Portfólio: Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body class="contact-page">
+    <header class="contact-topbar">
+        <a id="home-link" class="back-link" href="index.html" data-i18n="backHome">← Início</a>
+        <div class="language-switch" data-i18n-aria="languagePicker" aria-label="Idioma">
+            <button type="button" data-lang-choice="pt" aria-label="Português">PT</button>
+            <span>|</span>
+            <button type="button" data-lang-choice="en" aria-label="English">EN</button>
+            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Ativar modo claro" title="Ativar modo claro">☼</button>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-intro">
+            <p class="contact-eyebrow" data-i18n="contactEyebrow">VAMOS TIRAR SUA IDEIA DO PAPEL</p>
+            <h1><span data-i18n="contactHeadline">Vamos conversar</span><span class="contact-question">?</span></h1>
+            <p class="contact-description" data-i18n="contactDescription">Tem um projeto em mente ou quer saber mais sobre meu trabalho? Escolha um canal e fale comigo.</p>
+        </section>
+
+        <section class="contact-options" data-i18n-aria="contactOptionsLabel" aria-label="Canais de contato">
+            <a class="contact-card" href="mailto:robertalvestavarez@gmail.com">
+                <span class="contact-card-icon" aria-hidden="true">@</span>
+                <span class="contact-card-copy">
+                    <span class="contact-card-label" data-i18n="emailLabel">E-mail</span>
+                    <span class="contact-card-value">robertalvestavarez@gmail.com</span>
+                    <span class="contact-card-action" data-i18n="sendEmail">Enviar mensagem</span>
+                </span>
+                <span class="contact-card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/robert-tavares7a6303" target="_blank" rel="noopener noreferrer">
+                <span class="contact-card-icon contact-card-icon-text" aria-hidden="true">in</span>
+                <span class="contact-card-copy">
+                    <span class="contact-card-label">LinkedIn</span>
+                    <span class="contact-card-value">Robert Alves</span>
+                    <span class="contact-card-action" data-i18n="viewProfile">Ver perfil</span>
+                </span>
+                <span class="contact-card-arrow" aria-hidden="true">↗</span>
+            </a>
+            <article class="contact-card discord-card">
+                <span class="contact-card-icon contact-card-icon-text" aria-hidden="true">D</span>
+                <span class="contact-card-copy">
+                    <span class="contact-card-label" data-i18n="discordLabel">Discord</span>
+                    <span class="contact-card-value">robinss22</span>
+                    <span class="contact-card-action" data-i18n="discordSearchTip">Procure por este usuário no Discord</span>
+                    <span class="discord-actions">
+                        <button type="button" class="discord-action" data-discord-copy data-i18n="discordCopy">Copiar usuário</button>
+                        <a class="discord-action" href="https://discord.com/app" target="_blank" rel="noopener noreferrer" data-i18n="openDiscord">Abrir Discord ↗</a>
+                    </span>
+                    <span class="discord-copy-status" data-discord-status role="status" aria-live="polite"></span>
+                </span>
+            </article>
+        </section>
+
+        <footer class="contact-footer" data-i18n="contactFooter">Obrigado por visitar meu portfólio.</footer>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
